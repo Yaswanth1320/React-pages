@@ -1,0 +1,32 @@
+
+.help{
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+}
+.help h2 {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.help a{
+    text-decoration: none;
+    margin-right: 2rem;
+    background-color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: orange;
+    border: 1px solid orange;
+    transition: all .2s ease-in-out;
+}
+
+.help a:hover{
+    background: orange;
+    color: black;
+}
+
+.help .active{
+    background: orange;
+    color: black;
+}
+

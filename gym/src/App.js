@@ -10,7 +10,7 @@ import Login from "./pages/Login"
 import About from "./pages/About"
 import { HelpLayout } from './Layouts/HelpLayout';
 import Faq from './pages/Help/Faq';
-import { Conatct } from './pages/Help/Conatct';
+import { Conatct } from './pages/Help/Contact';
 import Error from './pages/Error';
 import { CareersLayout } from './Layouts/CareersLayout';
 import Careers from './pages/careers/Careers';

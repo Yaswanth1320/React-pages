@@ -1,0 +1,32 @@
+
+.faq{
+    margin: 4rem;
+}
+
+.faq h2{
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.faq .question{
+    padding: 2rem;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: gray;
+}
+
+.faq .question:hover{
+    background: rgb(161, 160, 160);
+}
+
+
+.faq .question .ques{
+    font-size: 1.5em;
+    color: whitesmoke;
+    padding-bottom: 10px;
+}
+
+.faq .question .ans{
+    color: black;
+}

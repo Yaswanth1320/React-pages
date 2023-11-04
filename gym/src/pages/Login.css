@@ -1,0 +1,109 @@
+
+.container{
+    width: 90%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+
+}
+
+.login{
+    background-color: rgb(56, 49, 49);
+    height: 450px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.container .login h2{
+    color: orange;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.container .login form{
+    width: 270px;
+    height: 200px;
+}
+
+.container .login label{
+    font-size: 10px;
+    color: white;
+}
+
+.container .login input{
+    margin-top: 4px;
+    padding: 9px;
+    width: 220px;
+    border: none;
+    outline: none;
+}
+
+.container .login i{
+    background-color: white;
+    padding-top : 0.45rem;
+    padding-right: 0.5rem;
+    padding-left: 0.6rem;
+    padding-bottom: 0.65rem;
+    justify-items: center;
+}
+
+.lock{
+    margin-top: 4px;
+    padding-top: 0.54rem !important;
+    padding-bottom: 0.6rem !important;
+    width: 235px;
+    border: none;
+    outline: none;
+    margin-bottom: 2rem;
+}
+
+.container .login button{
+    width: 255px;
+    border: 2px soild orange;
+    padding: 9px;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: rgb(56, 49, 49);
+    border: 1px solid orange;
+    color: orange;
+    transition: all .2s ease-in;
+}
+
+.container .login button:hover{
+    background: orange;
+    color: black;
+}
+
+.container .social{
+    margin-top: 2rem;
+}
+
+.container .social h3{
+    font-size: 13px;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.container .social a{
+    display: inline-block;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.container .social a i{
+    border-radius: 50px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.container .social a i:hover{
+    color: orange;
+}

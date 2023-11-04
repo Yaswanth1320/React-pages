@@ -1,0 +1,73 @@
+
+
+.main{
+    margin: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+}
+
+.main .conatct{
+    background: rgb(56, 49, 49);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 530px;
+    border-radius: 5px;
+}
+
+.main .conatct h1{
+    text-align: center;
+    color: rgb(255, 217, 0);
+}
+
+.main .conatct p{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    padding-top: 8px;
+}
+
+.main .conatct form{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.main .conatct form input{
+    font-size: 0.8rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+}
+
+.main .conatct form textarea{
+    border: none;
+    resize: none;
+    overflow: auto;
+    outline: none;
+    margin-bottom: 1.5rem;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.main .conatct form button{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.main .conatct form button:hover{
+    color: aliceblue;
+    background-color: rgb(255, 187, 0);
+}

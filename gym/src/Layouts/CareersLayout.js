@@ -5,11 +5,16 @@ import './ExcerciseLayout.css'
 export const CareersLayout = () => {
     const [type,searchType] = useState("biceps")
   return (
+    <>
+    <div className='class-title'>
+      <h1>Our Classes</h1>
+    </div>
     <div className='career'>
         <h2>Search your muscle</h2>
         <input type="text" name="text" value={type} onChange={(e)=> searchType(e.target.value)}/>
         <button className='btn'>Search</button>
         <Outlet />
     </div>
+    </>
   )
 }

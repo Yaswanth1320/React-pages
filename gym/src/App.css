@@ -17,7 +17,11 @@
   color: rgb(255, 217, 0);
 }
 
-
+.navbar .logo i{
+  color: orange;
+  padding-right: 5px;
+  font-size: 1.5rem;
+}
 
 
 .navbar .links a{

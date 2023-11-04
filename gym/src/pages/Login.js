@@ -3,15 +3,19 @@ import './Login.css'
 // import { Link } from 'react-router-dom'
 const Login = () => {
   return (
+    <>
+    <div className="login-title">
+      <h1>Login</h1>
+    </div>
     <div className='container'>
       <div className='login'>
         <h2>LogIn</h2>
         <form onSubmit={()=>{console.log("form submitted")}}>
               <label htmlFor="username">UserName</label><br />
-              <i className="fa-regular fa-user"></i><input type="text" name='username' placeholder='Type your username' />
+              <i className="fa-regular fa-user"></i><input className='lock' type="text" name='username' placeholder='Type your username' />
               <br /><br />
               <label htmlFor="password">Password</label><br />
-              <i class="fa-solid fa-lock"></i><input className='lock' type="password" name='password' placeholder='Type your email' ></input>
+              <i class="fa-solid fa-lock"></i><input type="password" name='password' placeholder='Type your email' ></input>
               {/* <p><Link path='login'>forget password ?</Link></p> */}
               <br />
               <button type="submit">Login</button>
@@ -25,6 +29,8 @@ const Login = () => {
       </div>
      
     </div>
+    </>
+    
   )
 }
 

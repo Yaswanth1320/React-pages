@@ -4,7 +4,9 @@ export const Conatct = () => {
     <div className="main">
         <div className="conatct">
         <h1>Contact Us</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, accusamus?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, accusamus?
+          Lorem ipsum dolor sit amet consectetur adipisicing.
+        </p>
             <form>
                 <input type="text" name="name" className="name" placeholder='Enter Your Name' /><br />
                 <input type="email" name="email" className="email" placeholder='Enter Your Email' /><br />

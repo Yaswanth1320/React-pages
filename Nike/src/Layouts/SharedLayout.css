@@ -1,0 +1,81 @@
+.main{
+    background: #efecec;
+    padding-top: 4px;
+}
+
+.navbar1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.7rem;
+    
+}
+
+.details{
+    display: flex;
+    width: 260px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details a{
+    text-decoration: none;
+    font-size: 0.75rem;
+    color: black;
+    
+}
+
+.navbar2{
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;  
+}
+
+.links{
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.links a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    font-weight: 600;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 270px;
+    padding-right: 10px;
+}
+.search input{
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    background:#efecec ;
+}
+
+.search i{
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.2s ease-in;
+}
+
+.search i:hover{
+    background:#efecec;
+}

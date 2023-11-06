@@ -16,6 +16,12 @@ export const Home = () => {
       </div>
     </div>
 
+    <div>
+      <div>
+        <img src="" alt=""/>
+      </div>
+    </div>
+
    </div>
   )
 }

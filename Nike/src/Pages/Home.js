@@ -16,9 +16,9 @@ export const Home = () => {
       </div>
     </div>
 
-    <div>
+    <div className='features'>
       <div>
-        <img src="" alt=""/>
+        <h1>featured</h1>
       </div>
     </div>
 

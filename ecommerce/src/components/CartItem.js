@@ -36,8 +36,8 @@ const CartItem = ({ item }) => {
                 <IoMdAdd />
               </div>
             </div>
-            <div className="flex-1 flex items-center justify-around">Rs.{Math.floor(price*80)} </div>
-            <div className="flex-1 flex justify-end items-center text-primary font-medium">Rs.{Math.floor(price*80*amount)} </div>
+            <div className="flex-1 flex items-center justify-around">Rs.{Math.floor(price*80)}/- </div>
+            <div className="flex-1 flex justify-end items-center text-primary font-medium">Rs.{Math.floor(price*80*amount)}/- </div>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { BsBag } from "react-icons/bs";
 import { SidebarContext } from "../contexts/SidebarContext";
 import { CartContext } from "../contexts/CartContext";
 import { Link } from "react-router-dom";
-import Logo from "../img/logo.svg";
+import Logo from "../img/logo1.svg";
 
 const Header = () => {
   const [active, setActive] = useState(false);
@@ -22,8 +22,8 @@ const Header = () => {
     >
       <div className="container mx-auto flex item-center justify-between h-full">
         <Link to="/">
-          <div>
-            <img className="w-[40px] " src={Logo} alt="" />
+          <div className="flex justify-center items-center gap-x-3">
+            <img className="w-[30px] " src={Logo} alt="" /><h1 className="text-2xl web-name">Surf</h1>
           </div>
         </Link>
         <div
@@ -31,7 +31,7 @@ const Header = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           <BsBag className="text-2xl" />
-          <div className="bg-red-500 absolute -right-1 bottom-2 text-[12px] w-[15px] h-[15px] text-white rounded-full flex justify-center items-center ">
+          <div className="bg-red-500 absolute -right-1 bottom-0 text-[12px] w-[15px] h-[15px] text-white rounded-full flex justify-center items-center ">
             {itemAmount}
           </div>
         </div>

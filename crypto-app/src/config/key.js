@@ -1,0 +1,3 @@
+
+export const API_KEY ='46cfa30d71mshe673167cb5ab93fp1465b2jsnbfd33292e4db';
+export const NEWS_API_KEY ='5e66b9ec82msh8fad8d14b334de5p12f1eejsn9c7b9bab0a63'

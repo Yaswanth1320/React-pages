@@ -9,8 +9,6 @@ const Home = () => {
     return item.category === "men's clothing" || item.category === "women's clothing"
   })
 
-  console.log(filterProducts)
-
   return (
     <div>
       <section className='py-16'>

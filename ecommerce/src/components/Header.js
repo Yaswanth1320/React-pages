@@ -23,7 +23,8 @@ const Header = () => {
       <div className="container mx-auto flex item-center justify-between h-full">
         <Link to="/">
           <div className="flex justify-center items-center gap-x-3">
-            <img className="w-[30px] " src={Logo} alt="" /><h1 className="text-2xl web-name">Surf</h1>
+            {/* <img className="w-[30px] " src={Logo} alt="" /> */}
+            <h1 className="text-2xl web-name text-[#4380e9]"><span className="text-black font-semibold">Surf</span> Store</h1>
           </div>
         </Link>
         <div
@@ -31,7 +32,7 @@ const Header = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           <BsBag className="text-2xl" />
-          <div className="bg-red-500 absolute -right-1 bottom-0 text-[12px] w-[15px] h-[15px] text-white rounded-full flex justify-center items-center ">
+          <div className="bg-[#1f59bc] absolute -right-1 bottom-0 text-[12px] w-[15px] h-[15px] text-white rounded-full flex justify-center items-center ">
             {itemAmount}
           </div>
         </div>

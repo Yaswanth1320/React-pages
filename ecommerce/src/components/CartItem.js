@@ -23,7 +23,7 @@ const CartItem = ({ item }) => {
               {title}
             </Link>
             <div onClick={() => removeFromCart(id)} className="text-xl cursor-pointer">
-              <IoMdClose className="text-gray-500 hover:text-red-500 transition" />
+              <IoMdClose className="text-gray-500 hover:text-[#1f59bc] transition" />
             </div>
           </div>
           <div className="flex gap-x-2 h-[36px] text-sm">

@@ -20,11 +20,11 @@ const Product = ({ product }) => {
           </div>
           <div className="absolute top-0 -right-11 group-hover:right-0 p-2 flex flex-col justify-center gap-y-1 opacity-0 group-hover:opacity-100 transition-all">
             <button onClick={() => addToCart(product,id)}>
-              <div className="flex justify-center items-center text-white bg-red-500 w-10 h-10">
+              <div className="flex justify-center items-center text-white bg-[#1f59bc] w-10 h-10 rounded-3xl">
                 <BsPlus className="text-3xl" />
               </div>
             </button>
-            <div className="w-10 h-10 bg-white flex items-center justify-center text-primary drop-shadow-xl">
+            <div className="w-10 h-10 bg-white flex items-center justify-center text-primary drop-shadow-xl rounded-3xl">
               <Link to={`product/${id}`}>
                 <BsEyeFill />
               </Link>

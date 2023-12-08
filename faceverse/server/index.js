@@ -17,6 +17,7 @@ import { verifyToken } from "./middleware/auth.js";
 import User from "./models/User.js";
 import Post from "./models/Post.js";
 import { users,posts } from './data/index.js'
+import { MONGO_URL } from "./config/env.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -54,7 +55,7 @@ app.use('/posts', postRoutes)
 const PORT = 3001 || 6001;
 
 mongoose
-  .connect("mongodb+srv://yaswanth:yaswanth123@cluster0.h9yddim.mongodb.net/")
+  .connect(MONGO_URL)
   .then(() => {
     console.log("connected to database");
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));

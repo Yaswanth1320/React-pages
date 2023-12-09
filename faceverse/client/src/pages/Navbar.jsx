@@ -49,6 +49,7 @@ function Navbar() {
         <Typography
           fontWeight="bold"
           fontSize="clamp(1rem,2rem,2.25rem)"
+          fontFamily="'Beau Rivage', cursive"
           color="primary"
           onClick={() => navigate("/home")}
           sx={{
@@ -108,14 +109,18 @@ function Navbar() {
               <MenuItem value={fullName}>
                 <Typography>{fullName}</Typography>
               </MenuItem>
-              <MenuItem onClick={() => {
-                dispatch(setLogout())
-                Swal.fire({
-                  title: "Success!",
-                  text: "You have successfully logged out",
-                  icon: "success",
-                });
-                }}>Log Out</MenuItem>
+              <MenuItem
+                onClick={() => {
+                  dispatch(setLogout());
+                  Swal.fire({
+                    title: "Success!",
+                    text: "You have successfully logged out",
+                    icon: "success",
+                  });
+                }}
+              >
+                Log Out
+              </MenuItem>
             </Select>
           </FormControl>
         </Flex>
@@ -142,7 +147,12 @@ function Navbar() {
             </IconButton>
           </Box>
 
-          <Flex display='flex' flexDirection='column' justifyContent='center' gap="3rem">
+          <Flex
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            gap="3rem"
+          >
             <IconButton onClick={() => dispatch(setMode())}>
               {theme.palette.mode === "dark" ? (
                 <DarkMode sx={{ fontSize: "25px" }} />

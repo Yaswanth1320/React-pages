@@ -248,7 +248,6 @@ const Form = () => {
             />
           </Box>
 
-          {/* BUTTONS */}
           <Box>
             <Button
               fullWidth
@@ -258,12 +257,12 @@ const Form = () => {
                 p: "1rem",
                 backgroundColor: palette.primary.main,
                 color: palette.background.alt,
-                "&:hover": { color: palette.primary.main },
+                "&:hover": { color: palette.primary.main, borderColor: palette.primary.main },
               }}
             >
               {isLogin ? "LOGIN" : "REGISTER"}
             </Button>
-            <Typography
+            <Typography textAlign='center'
               onClick={() => {
                 setPageType(isLogin ? "register" : "login");
                 resetForm();

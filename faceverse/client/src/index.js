@@ -8,21 +8,21 @@ import { persistStore,FLUSH, REHYDRATE,PAUSE, REGISTER,PERSIST,PURGE } from 'red
 import storage from 'redux-persist/lib/storage'
 import { PersistGate } from 'redux-persist/integration/react';
 import persistReducer from 'redux-persist/es/persistReducer';
-import  authReducer from './Redux/index.js'
+import  authReducer from './Redux/index.js';
 
 const persistConfig = { key: "root", storage, version: 1};
 const persistedReducer = persistReducer(persistConfig,authReducer);
 
 const store = configureStore({
   reducer: persistedReducer,
-  middleware: (getDefaultMiddleware) =>{
-    getDefaultMiddleware({
+  middleware: (getDefaultMiddleware) => {
+    return getDefaultMiddleware({
       serializableCheck: {
         ignoreActions: [FLUSH, REHYDRATE, PAUSE, REGISTER, PERSIST, PURGE],
       },
     });
-  }
-})
+  },
+});
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

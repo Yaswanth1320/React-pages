@@ -15,7 +15,7 @@ export const register = async (req, res) => {
       location,
       occupation,
       bio,
-    } = req;
+    } = req.body;
     const salt = await bcrypt.genSalt();
     const hashedPassword = await bcrypt.hash(password, salt);
 
@@ -23,20 +23,20 @@ export const register = async (req, res) => {
       firstName,
       lastName,
       email,
-      password,
+      password: hashedPassword,
       picturePath,
       friends,
       location,
       occupation,
       bio,
       viewedProfile: Math.floor(Math.random() * 10000),
-      impressions: Math.floor(Math.random() * 10000)
+      impressions: Math.floor(Math.random() * 10000),
     });
 
     const savedUser = await newUser.save();
     res.status(201).json(savedUser)
   } catch (error) {
-    res.status(500).json({error: error.message})
+    res.status(404).json({error: error.message})
   }
 };
 
@@ -47,17 +47,17 @@ export const login = async(req,res) =>{
 
       const user = await User.findOne({ email });
       if(!user){
-        return res.status(401).json({msg: "Invalid credentials"})
+        return res.status(404).json({msg: "Invalid credentials"})
       }
 
       const match = await bcrypt.compare(password, user.password);
       if (!match) {
-        return res.status(401).json({ msg: "Incorrect Password" });
+        return res.status(404).json({ msg: "Incorrect Password" });
       }
 
       const token = jwt.sign({ id: user._id }, SECRET_KEY);
       delete user.password;
-      res.status(400).json({ token,user });
+      res.status(200).json({ token,user });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

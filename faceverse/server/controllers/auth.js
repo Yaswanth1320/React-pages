@@ -1,7 +1,6 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
-import { SECRET_KEY } from "../config/env.js";
 
 export const register = async (req, res) => {
   try {
@@ -55,7 +54,7 @@ export const login = async(req,res) =>{
         return res.status(404).json({ msg: "Incorrect Password" });
       }
 
-      const token = jwt.sign({ id: user._id }, SECRET_KEY);
+      const token = jwt.sign({ id: user._id }, process.env.SECRET_KEY);
       delete user.password;
       res.status(200).json({ token,user });
   } catch (error) {

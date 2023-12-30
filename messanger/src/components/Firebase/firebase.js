@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDu9SI8as3gQ0XSbQEZ28FOQU0LwxxplXo",
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "messanger-87b93.firebaseapp.com",
   projectId: "messanger-87b93",
   storageBucket: "messanger-87b93.appspot.com",

@@ -1,5 +1,4 @@
 import jwt from "jsonwebtoken";
-import { SECRET_KEY } from "../config/env.js";
 
 export const verifyToken = async(req,res,next) =>{
     try {
@@ -10,7 +9,7 @@ export const verifyToken = async(req,res,next) =>{
             token = token.slice(7, token.length).trimLeft()
         }
 
-        const verified = jwt.verify(token, SECRET_KEY);
+        const verified = jwt.verify(token, process.env.SECRET_KEY);
         req.user = verified;
         next();
         

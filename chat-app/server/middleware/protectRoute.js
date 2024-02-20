@@ -15,11 +15,15 @@ const protectRoute = async (req,res,next) =>{
             res.status(401).json({ error: "Unauthorized - no token found" });
         }
 
-        const user = await User.findOne(decoded.userId).select("-password");
+        const user = await User.findById(decoded.userId).select("-password");
 
         if (!user) {
           res.status(401).json({ error: "user not found" });
         }
+
+        req.user = user;
+
+        next();
 
     } catch (error) {
         console.log("Error in the middleware",error.message);

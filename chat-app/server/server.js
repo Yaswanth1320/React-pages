@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cookieParser from 'cookie-parser';
 import authRoutes from "./routes/auth.routes.js";
 import msgRoutes from "./routes/msg.routes.js";
+import userRoutes from './routes/users.routes.js'
 import connectToDB from "./database/connectToDB.js";
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(cookieParser());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", msgRoutes);
+app.use("/api/users", userRoutes);
 
 app.get("/", (req, res) => {
   res.send("hello world");

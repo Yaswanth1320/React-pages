@@ -101,8 +101,8 @@ const Signin = () => {
           </Link>
 
           <div>
-            <button className="mt-2 btn btn-block btn-sm hover:bg-[#3a86ff] hover:text-[#e0e1dd] transition-all text-[0.9rem] duration-300">
-              Sign Up
+            <button disabled={loading} className="mt-2 btn btn-block btn-sm hover:bg-[#3a86ff] hover:text-[#e0e1dd] transition-all text-[0.9rem] duration-300">
+              {loading ? <span className="loading loading-spinner"></span>: "Sign up"}
             </button>
           </div>
         </form>

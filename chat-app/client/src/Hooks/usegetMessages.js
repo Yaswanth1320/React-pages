@@ -23,9 +23,9 @@ const usegetMessages = () => {
     };
 
     if (selectedConversation?._id) getMessages();
-  }, [selectedConversation?._id,setMessages]);
+  }, [selectedConversation?._id, setMessages]);
 
-  return {messages,loading};
+  return { messages, loading };
 };
 
 export default usegetMessages;

@@ -16,11 +16,11 @@ const Login = () => {
   return (
     <div className="font-kanit flex flex-col items-center justify-center min-w-96 mx-auto">
       <div className="w-full p-6 rounded-lg shadow-md bg-[#e0e1dd]">
-        <h1 className="text-3xl font-semibold text-center">Login</h1>
+        <h1 className="text-3xl font-semibold text-center text-black">Login</h1>
         <form onSubmit={handleSubmit}>
           <div>
-            <label className="label p-2">
-              <span className="text-base label-text">Username</span>
+            <label className="label p-2 ">
+              <span className="text-base label-text text-black">Username</span>
             </label>
             <input
               type="text"
@@ -33,7 +33,7 @@ const Login = () => {
 
           <div>
             <label className="label p-2">
-              <span className="text-base label-text">Password</span>
+              <span className="text-base label-text text-black">Password</span>
             </label>
             <input
               type="text"
@@ -46,7 +46,7 @@ const Login = () => {
 
           <Link
             to="/signin"
-            className="text-sm mt-6 mx-2 hover:underline hover:text-[#3a86ff] inline-block"
+            className="text-sm mt-6 mx-2 hover:underline hover:text-[#3a86ff] text-black inline-block"
           >
             {"Don't"} have an account?{" "}
           </Link>

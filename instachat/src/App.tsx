@@ -1,5 +1,7 @@
+import "./global.css";
+
 function App() {
-  return <div>insta</div>;
+  return <div>Insta</div>;
 }
 
 export default App;

@@ -5,6 +5,7 @@ import SignUpForm from "./pages/auth/SignUpForm";
 import { Home } from "./pages/private";
 import AuthLayout from "./pages/auth/AuthLayout";
 import HomeLayout from "./pages/private/HomeLayout";
+import { Toaster } from "@/components/ui/toaster";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route index element={<Home />} />
         </Route>
       </Routes>
+      <Toaster />
     </main>
   );
 }

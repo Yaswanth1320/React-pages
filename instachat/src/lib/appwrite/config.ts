@@ -7,11 +7,11 @@ export const appWriteConfig = {
   storageId: import.meta.env.APPWRITE_STORAGE_ID,
   userCollectionId: import.meta.env.APPWRITE_USERS,
   postCollectionId: import.meta.env.APPWRITE_POSTS,
-  savesCollectionId: import.meta.env.APPWRITE_SAVES,
+  savesCollectionId: import.meta.env.APPWRITE_SAVES, 
 };
 
 export const client = new Client()
-  .setEndpoint("")
+  .setEndpoint("https://cloud.appwrite.io/v1")
   .setProject("");
 
 export const account = new Account(client);

@@ -3,6 +3,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   Form,
   FormControl,
@@ -15,11 +16,21 @@ import { Input } from "@/components/ui/input";
 import { signUpValidation } from "@/lib/validation";
 import { z } from "zod";
 import Loader from "@/components/common/Loader";
-import { createUserAccount } from "@/lib/appwrite/api";
+import {
+  useCreateUserAccount,
+  useSignInAccount,
+} from "@/lib/react-query/queriesAndMutations";
+import { useUserContext } from "@/context/AuthContext";
 
 const SignUpForm = () => {
+  const navigate = useNavigate();
   const { toast } = useToast();
-  const isLoading = false;
+  const { checkAuthUser, isLoading: isUserLoading } = useUserContext();
+
+  const { mutateAsync: createUserAccount, isPending: isCreated } =
+    useCreateUserAccount();
+  const { mutateAsync: signInAccount, isPending: isSignIn } =
+    useSignInAccount();
 
   const form = useForm<z.infer<typeof signUpValidation>>({
     resolver: zodResolver(signUpValidation),
@@ -35,6 +46,27 @@ const SignUpForm = () => {
     const newUser = await createUserAccount(values);
 
     if (!newUser) {
+      return toast({
+        title: "sign-up failed try again later",
+      });
+    }
+
+    const session = await signInAccount({
+      email: values.email,
+      password: values.password,
+    });
+
+    if(!session){
+      return toast({
+        title: "sign-up failed try again later",
+      });
+    }
+
+    const isLoggedIn = await checkAuthUser();
+    if(isLoggedIn){
+      form.reset();
+      navigate('/')
+    }else{
       return toast({
         title: "sign-up failed try again later",
       });
@@ -122,7 +154,7 @@ const SignUpForm = () => {
             )}
           />
           <Button type="submit" className="shad-button_primary">
-            {isLoading ? (
+            {isCreated ? (
               <div className="flex-center gap-2">
                 <Loader />
               </div>

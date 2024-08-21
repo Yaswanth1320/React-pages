@@ -39,8 +39,8 @@ export async function saveUserToDB(user: {
 }) {
   try {
     const newUser = await databases.createDocument(
-      "",
-      "",
+      "666c7de8001e91bfa190",
+      "666c7e8b0001fece8419",
       ID.unique(),
       user
     );
@@ -70,8 +70,8 @@ export async function getCurrentAccount() {
     if (!currentAccount) throw Error;
 
     const currentUser = await databases.listDocuments(
-      "",
-      "",
+      "666c7de8001e91bfa190",
+      "666c7e8b0001fece8419",
       [Query.equal("accountId", currentAccount.$id)]
     );
 

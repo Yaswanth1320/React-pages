@@ -76,7 +76,47 @@ npm run lint
 
 Here's a basic overview of the project folder structure:
 
-/client ├── /node_modules # Project dependencies ├── /public # Static assets ├── /src # Source code │ ├── /assets # Static files (images, fonts, etc.) │ ├── /components # Reusable UI components │ ├── /hooks # Custom React hooks │ ├── /pages # Page components (views) │ ├── /state # Global state management (Zustand) │ ├── /styles # TailwindCSS and other styles │ └── /utils # Utility functions ├── .eslintrc.js # ESLint configuration ├── .gitignore # Git ignore file ├── index.html # Main HTML entry point ├── package.json # Project configuration and dependencies ├── tailwind.config.js # TailwindCSS configuration └── vite.config.js # Vite configuration   
+
+### Description of key folders and files:
+
+- **/node_modules**  
+  Contains all the project dependencies installed via npm/yarn.
+
+- **/public**  
+  Contains static assets such as images, icons, or other files that need to be served directly.
+
+- **/src**  
+  The main source code for the project.
+  - **/assets**: Static files like images and fonts.
+  - **/components**: Reusable UI components (buttons, inputs, headers, etc.).
+  - **/hooks**: Custom React hooks to abstract logic.
+  - **/pages**: Page components (views) for different routes in the application.
+  - **/state**: Contains the global state management logic (using Zustand).
+  - **/styles**: TailwindCSS configurations, custom CSS, or other styling files.
+  - **/utils**: Helper functions or utilities used throughout the app.
+
+- **.eslintrc.js**  
+  Configuration file for **ESLint**, a tool to enforce coding style and quality rules.
+
+- **.gitignore**  
+  Specifies which files and directories to ignore in version control (e.g., `node_modules`, `.env`).
+
+- **index.html**  
+  The main HTML file that serves as the entry point for the app.
+
+- **package.json**  
+  Contains the project’s metadata, dependencies, scripts, and other configuration for npm/yarn.
+
+- **tailwind.config.js**  
+  Configuration file for **TailwindCSS**, defining custom themes, plugins, etc.
+
+- **vite.config.js**  
+  Configuration file for **Vite**, the build tool used in this project.
+
+---
+
+This structure ensures that your project is modular, scalable, and easy to maintain.
+
 
 # Contributing
 We welcome contributions to this project! To contribute:

@@ -76,23 +76,7 @@ npm run lint
 
 Here's a basic overview of the project folder structure:
 
-/client
-|-- /node_modules           # Project dependencies
-|-- /public                 # Static assets
-|-- /src                    # Source code
-    |-- /assets             # Static files (images, fonts, etc.)
-    |-- /components         # Reusable UI components
-    |-- /hooks              # Custom React hooks
-    |-- /pages              # Page components (views)
-    |-- /state              # Global state management (Zustand)
-    |-- /styles             # TailwindCSS and other styles
-    |-- /utils              # Utility functions
-|-- .eslintrc.js            # ESLint configuration
-|-- .gitignore              # Git ignore file
-|-- index.html              # Main HTML entry point
-|-- package.json            # Project configuration and dependencies
-|-- tailwind.config.js      # TailwindCSS configuration
-|-- vite.config.js          # Vite configuration
+/client ├── /node_modules # Project dependencies ├── /public # Static assets ├── /src # Source code │ ├── /assets # Static files (images, fonts, etc.) │ ├── /components # Reusable UI components │ ├── /hooks # Custom React hooks │ ├── /pages # Page components (views) │ ├── /state # Global state management (Zustand) │ ├── /styles # TailwindCSS and other styles │ └── /utils # Utility functions ├── .eslintrc.js # ESLint configuration ├── .gitignore # Git ignore file ├── index.html # Main HTML entry point ├── package.json # Project configuration and dependencies ├── tailwind.config.js # TailwindCSS configuration └── vite.config.js # Vite configuration   
 
 # Contributing
 We welcome contributions to this project! To contribute:

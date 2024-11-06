@@ -7,7 +7,7 @@ const useLogin = () => {
   const { setAuthUser } = useAuthContext();
 
   const login = async (username, password) => {
-    const success = handleInputErrors(username,password);
+    const success = handleInputErrors(username, password);
 
     if (!success) return;
     setLoading(true);
@@ -28,8 +28,10 @@ const useLogin = () => {
 
       localStorage.setItem("chat-user", JSON.stringify(data));
       setAuthUser(data);
+      toast(`Welcome Back ${username}`, {
+        icon: "👋",
+      });
       console.log(data);
-
     } catch (error) {
       toast.error(error.message);
     } finally {
@@ -37,14 +39,13 @@ const useLogin = () => {
     }
   };
 
-  return {loading,login}
+  return { loading, login };
 };
 
 export default useLogin;
 
-
-function handleInputErrors(username,password) {
-  if (!username || !password ) {
+function handleInputErrors(username, password) {
+  if (!username || !password) {
     toast.error("All fields  are required");
     return false;
   }

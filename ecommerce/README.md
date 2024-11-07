@@ -49,7 +49,7 @@ To get this project up and running locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Yaswanth1320/React-pages.git
    cd ecommerce
    npm install
    npm start

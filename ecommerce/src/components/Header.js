@@ -3,7 +3,6 @@ import { BsBag } from "react-icons/bs";
 import { SidebarContext } from "../contexts/SidebarContext";
 import { CartContext } from "../contexts/CartContext";
 import { Link } from "react-router-dom";
-import Logo from "../img/logo1.svg";
 
 const Header = () => {
   const [active, setActive] = useState(false);
@@ -20,7 +19,7 @@ const Header = () => {
     <header
       className={`${active ? "bg-white py-4 shadow-md" : "bg-none py-6"} fixed w-full z-10 transition-all`}
     >
-      <div className="container mx-auto flex item-center justify-between h-full">
+      <div className="container mx-auto flex item-center justify-between h-full px-4">
         <Link to="/">
           <div className="flex justify-center items-center gap-x-3">
             {/* <img className="w-[30px] " src={Logo} alt="" /> */}

@@ -41,6 +41,9 @@ const storage = multer.diskStorage({
   },
 });
 const upload = multer({ storage });
+app.get("/", async (req, res) => {
+  res.send("API successfully");
+});
 
 //endpoints
 app.post("/auth/register", upload.single("picture"), register);
